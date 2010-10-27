@@ -1,0 +1,33 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: bada IDE Debugger Plug-in
+Bundle-SymbolicName: com.osp.debugger;singleton:=true
+Bundle-Version: 1.0.0.v20100816
+Bundle-Activator: com.osp.debugger.DebuggerPlugin
+Bundle-Vendor: Samsung Electronics
+Bundle-Localization: plugin
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.core;bundle-version="3.4.0",
+ org.eclipse.debug.ui;bundle-version="3.4.1",
+ org.eclipse.cdt.core;bundle-version="5.0.1",
+ org.eclipse.cdt.debug.core;bundle-version="5.0.1",
+ org.eclipse.cdt.launch;bundle-version="5.0.1",
+ org.eclipse.cdt.debug.ui;bundle-version="5.0.1",
+ org.eclipse.cdt.debug.mi.core;bundle-version="5.0.1",
+ org.eclipse.cdt.debug.mi.ui;bundle-version="5.0.1",
+ org.eclipse.cdt.ui;bundle-version="5.0.1",
+ com.osp.ide,
+ org.eclipse.core.variables;bundle-version="3.2.100",
+ org.eclipse.ui.console;bundle-version="3.3.0",
+ com.osp.ide.message;bundle-version="1.0.0",
+ org.eclipse.jface.text;bundle-version="3.5.1"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Export-Package: com.osp.debugger,
+ com.osp.debugger.core,
+ com.osp.debugger.launch,
+ com.osp.debugger.launch.shortcut,
+ com.osp.debugger.launch.simul,
+ com.osp.debugger.launch.target
+
