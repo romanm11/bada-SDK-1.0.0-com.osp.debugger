@@ -1,1 +1,6 @@
 bin
+/@dot
+@dot.log
+/build.xml
+/javaCompiler...args
+/com.osp.debugger_*.jar
