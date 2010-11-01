@@ -11,7 +11,7 @@ public class SimulatorPathHelper {
 
 	public static String getSimulatorPath(String sdkName, IProject proj)
 	{
-		return PathResolver.getAbsolutePath(IConstants.ENV_SIMULATOR_LIB_PATH_VAR, proj) + "\\" + IDebugConstants.SIMULATOR_NAME;
+		return PathResolver.getAbsolutePath(IConstants.ENV_SIMULATOR_LIB_PATH_VAR, proj) + java.io.File.separatorChar + IDebugConstants.SIMULATOR_NAME;
 	}
 	
 	public static String getSimulatorDirectory(String sdkName, IProject proj)

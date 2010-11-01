@@ -179,4 +179,27 @@
          </configurationType>
       </shortcut>
    </extension>
+   <extension
+         point="org.eclipse.debug.core.sourceContainerTypes">
+      <sourceContainerType
+            class="com.osp.debugger.sourceLookup.Wine2LinuxSourceContainerType"
+            description="Maps wine path 2 linux path"
+            id="com.osp.debugger.sourceLookup.Wine2LinuxSourceContainerType"
+            name="Maps wine path 2 linux path">
+      </sourceContainerType>
+   </extension>
+   <extension
+         point="org.eclipse.cdt.debug.core.supportedSourceContainerTypes">
+      <sourceContainer
+            id="com.osp.debugger.sourceLookup.Wine2LinuxSourceContainerType">
+      </sourceContainer>
+   </extension>
+   <extension
+         point="org.eclipse.debug.ui.sourceContainerPresentations">
+      <sourceContainerPresentation
+            browserClass="com.osp.debugger.sourceLookup.Wine2LinuxSourceContainerBrowser"
+            containerTypeID="com.osp.debugger.sourceLookup.Wine2LinuxSourceContainerType"
+            id="com.osp.debugger.sourceLookup.Wine2LinuxSourceContainerBrowser">
+      </sourceContainerPresentation>
+   </extension>
 </plugin>

@@ -54,16 +54,31 @@ public class WinMIEnvironmentDirectory extends MIEnvironmentDirectory {
 	 * folders into the given array starting from <code>index</code>. 
 	 */
 	private void convertPath(StringBuffer sb, String[] paths, int index) {
-		if (sb.charAt(sb.length() - 1) == ';')
-			sb.deleteCharAt(sb.length() - 1);
-		String result = convertPath0(sb.toString());
-		StringTokenizer st = new StringTokenizer(result, ":"); //$NON-NLS-1$
-		int j = index;
-		while(st.hasMoreTokens()) {
-			if (j >= paths.length)
-				break;
-			paths[j++] = st.nextToken();
-		}
+//		if (java.io.File.separatorChar == '/')
+//		{
+//			if (sb.charAt(sb.length() - 1) == ';')
+//				sb.deleteCharAt(sb.length() - 1);
+//			StringTokenizer st = new StringTokenizer(sb.toString(), ";"); //$NON-NLS-1$
+//			int j = index;
+//			while(st.hasMoreTokens()) {
+//				if (j >= paths.length)
+//					break;
+//				paths[j++] = st.nextToken();
+//			}
+//		}
+//		else
+//		{
+			if (sb.charAt(sb.length() - 1) == ';')
+				sb.deleteCharAt(sb.length() - 1);
+			String result = convertPath0(sb.toString());
+			StringTokenizer st = new StringTokenizer(result, ":"); //$NON-NLS-1$
+			int j = index;
+			while(st.hasMoreTokens()) {
+				if (j >= paths.length)
+					break;
+				paths[j++] = st.nextToken();
+			}
+//		}
 	}
 
 	/**

@@ -11,7 +11,7 @@ public class IDebugConstants {
 
 	public static final String COMM_PORT[]={"COM1", "COM2", "COM3", "COM4"};
 	public static final String COMM_PORT_DEFAULT="COM1";
-	public static final String FILE_SEP_BSLASH="\\";
+	public static final String FILE_SEP_BSLASH=java.io.File.separator;
 	
 	public static final String TARGET_PORT_DEFAULT="6200";
 	
@@ -37,8 +37,8 @@ public class IDebugConstants {
 	public static final String ID_LAUNCH_OSP_TARGET_APP = "com.osp.debugger.TargetLaunch"; //$NON-NLS-1$
 	public static final String ID_LAUNCH_OSP_TARGET_DEBUGGER = "com.osp.debugger.TargetDebugger";
 	
-	public static final String DEBUGGER_SIMUL_DEBUG_NAME_DEFAULT ="${SDKROOT}" + IConstants.PATH_TOOLS + "\\Toolchains\\Win32\\bin\\i686-mingw32-gdb";
-	public static final String DEBUGGER_TARGET_DEBUG_NAME_DEFAULT="${SDKROOT}" + IConstants.PATH_TOOLS + "\\Toolchains\\ARM\\bin\\gdb_arm";
+	public static final String DEBUGGER_SIMUL_DEBUG_NAME_DEFAULT ="${SDKROOT}" + IConstants.PATH_TOOLS + java.io.File.separatorChar + "Toolchains" + java.io.File.separatorChar + "Win32" + java.io.File.separatorChar + "bin" + java.io.File.separatorChar + "i686-mingw32-gdb.exe";
+	public static final String DEBUGGER_TARGET_DEBUG_NAME_DEFAULT="${SDKROOT}" + IConstants.PATH_TOOLS + java.io.File.separatorChar + "Toolchains" + java.io.File.separatorChar + "ARM" + java.io.File.separatorChar + "bin" + java.io.File.separatorChar + "gdb_arm";
 	
 	
 	public static final boolean DEBUGGER_VERBOSE_MODE_DEFAULT = false;
